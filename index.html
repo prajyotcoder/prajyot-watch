@@ -14,6 +14,7 @@
       height: 100vh;
       background: radial-gradient(circle, #0c0c0c, #000000);
       font-family: Arial, sans-serif;
+      flex-direction: column; /* Align everything vertically */
     }
 
     .watch {
@@ -103,6 +104,21 @@
     .numbers div:nth-child(4) { transform: rotate(30deg) translateX(140px) rotate(-30deg); }
     .numbers div:nth-child(5) { transform: rotate(60deg) translateX(140px) rotate(-60deg); }
     .numbers div:nth-child(6) { transform: rotate(90deg) translateX(140px) rotate(-90deg); }
+
+    /* Styling for the name on the watch */
+    .watch-name {
+      position: absolute;
+      top: 75%;  /* Move the name closer to the 6 o'clock position */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.2rem;
+      color: #d4af37;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      z-index: 4;
+      letter-spacing: 1px;
+    }
   </style>
 </head>
 <body>
@@ -125,6 +141,9 @@
       <div>11</div>
       <div>12</div>
     </div>
+
+    <!-- Add the name near the 6 o'clock position -->
+    <div class="watch-name">Prajyot Watch Maker</div>
   </div>
 
   <audio id="bell-sound" src="https://www.soundjay.com/button/beep-07.mp3" preload="auto"></audio>
